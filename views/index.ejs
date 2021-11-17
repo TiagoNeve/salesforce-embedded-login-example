@@ -48,8 +48,12 @@
 <script>
     function alteraPai() {
         const parentDocument =  window.parent.document;
-        const iframe = parent.document.getElementById(window.name);
-        ifrane.style.setProperty("background-color", "red", "importante");
+        const iframe = document.getElementById("marketing");
+        
+        const conteudoIframe = iframe.contentDocument || iframe.contentWindow.document; 
+        
+        conteudoIframe.style.setProperty("background-color", "red", "importante");
+        
         
         // const divPai = parentDocument.getElementById('right');
         // divPai.style.setProperty("background-color", "red", "important");
